@@ -1,1 +1,1 @@
-web: node agency.js
+web: node ./js/agency.js
