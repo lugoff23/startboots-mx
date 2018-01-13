@@ -1,11 +1,18 @@
-sudo:          false
-language:      node_js
+sudo: false
+language: node_js
 node_js:
-  - "node"
-install:       npm install
+- node
+install: npm install
 script:
-  - npm test
-  - gulp
+- npm test
+- gulp
 cache:
   directories:
-    - node_modules
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: qxCbcUPuL6yTwXfmh3mfU2zNoDfzvKNPC1OxOEPOjpve6y2qOzPFn5gaQFZnXggXdHST6G2iYdi/HkH2fca0vCXDaZ0/RdS1FflQgK9sFrhq+B1DSwZjXV71ONHt2Lkk4FheEW9W4QOhQwlp2jW0nmeSL38cFSmOhfiYmFLfZiitjdlAWQcXgKvFG6aZYfHpTg+4oafDX7KiaDwBl2kAaECEDKyzjw3XjfKn1t/ovnGNZdBSqcpunar546YGNuuS1G+dYp3Z+zDbXXkGdbgfHI4UVXKwwDxNU23jkGJyoFBbWStyoVTfQrNYOiRFjlytTXXrIFPLEb7vhYpGb+3SHpTRrHMfk2WpJMNBnuhQ4q0ir4XGYmdpq6zxsNMB+hDRFUjp/Niu/9sVL83AcbvyX4k4RFzq9efRsj6XMaGJ/IjhO0y3MOWTkmUVFu/qEWetrE4RCZHjaEA0dHH2MxF/OvIjhytVCeXyUvCHuHM52462qoDVACyC+3Ft8/UMn7uhQKAlbxaUcOwPlS0B1b7HQbLv2D7XxZl9fL6vSqcoJ5VaODArMafZFn6GOUNOdZlM9FLJd6WO4ayuhHacnRKkMkxbAkPmnc7nbLgxKmDAhMuuM2UXYT6cBVR3xM8MrPnxcg+eWP27zKiLThTlPDQ4m69cH5xFsL8ex/+h7d9u248=
+  app: startboots-mx
+  on:
+    repo: lugoff23/startboots-mx
