@@ -10,6 +10,8 @@ before_script:
   - php -r "unlink('composer-setup.php');"
   - php composer.phar install
 script: vendor/bin/phpunit tests
+env:
+  - SH=bash
 deploy:
   provider: heroku
   api_key:
