@@ -1,1 +1,1 @@
-web: node agency.js
+web: vendor/bin/heroku-php-apache2
